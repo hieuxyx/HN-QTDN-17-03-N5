@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_asset_budget_tree" model="ir.ui.view">
+        <field name="name">asset.budget.tree</field>
+        <field name="model">asset.budget</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="planned_amount" sum="Kế hoạch"/>
+                <field name="committed_amount" sum="Đã cam kết"/>
+                <field name="available_amount" sum="Còn lại"
+                       decoration-danger="available_amount &lt; 0"/>
+                <field name="state" widget="badge"/>
+                <field name="currency_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_asset_budget_form" model="ir.ui.view">
+        <field name="name">asset.budget.form</field>
+        <field name="model">asset.budget</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" string="Áp dụng" type="object"
+                            class="oe_highlight" states="draft"/>
+                    <button name="action_close" string="Đóng ngân sách" type="object" states="confirmed"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="VD: Ngân sách mua sắm Q1/2026 - Phòng IT"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        <group>
+                            <field name="planned_amount"/>
+                            <field name="committed_amount"/>
+                            <field name="actual_amount"/>
+                            <field name="available_amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <field name="request_ids" readonly="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="total_cost"/>
+                            <field name="state"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_asset_budget" model="ir.actions.act_window">
+        <field name="name">Ngân sách mua sắm</field>
+        <field name="res_model">asset.budget</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

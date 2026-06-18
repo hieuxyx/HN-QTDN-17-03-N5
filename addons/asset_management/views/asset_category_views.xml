@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_asset_category_tree" model="ir.ui.view">
+        <field name="name">asset.category.tree</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="method"/>
+                <field name="method_number"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_asset_category_form" model="ir.ui.view">
+        <field name="name">asset.category.form</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="Tên nhóm tài sản..."/></h1>
+                    </div>
+                    <group>
+                        <group string="Thông tin">
+                            <field name="code"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Tham số khấu hao">
+                            <field name="method"/>
+                            <field name="method_number"/>
+                            <field name="method_period"/>
+                            <field name="degressive_factor"
+                                   attrs="{'invisible': [('method','!=','degressive')]}"/>
+                            <field name="prorata"/>
+                        </group>
+                    </group>
+                    <group string="Tài khoản kế toán mặc định">
+                        <field name="account_asset_id"/>
+                        <field name="account_depreciation_id"/>
+                        <field name="account_expense_id"/>
+                        <field name="journal_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_asset_category" model="ir.actions.act_window">
+        <field name="name">Nhóm tài sản</field>
+        <field name="res_model">asset.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
