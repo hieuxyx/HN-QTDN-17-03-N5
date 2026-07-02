@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tai_khoan_ke_toan,access_tai_khoan_ke_toan,model_tai_khoan_ke_toan,,1,1,1,1
+access_but_toan,access_but_toan,model_but_toan,,1,1,1,1
+access_dong_but_toan,access_dong_but_toan,model_dong_but_toan,,1,1,1,1

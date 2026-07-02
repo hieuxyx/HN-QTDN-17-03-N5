@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ke_toan_root" name="Kế toán" sequence="20"/>
+    <menuitem id="menu_ke_toan_but_toan" name="Bút toán" parent="menu_ke_toan_root" action="action_but_toan" sequence="10"/>
+    <menuitem id="menu_ke_toan_so_cai" name="Sổ cái" parent="menu_ke_toan_root" action="action_so_cai" sequence="20"/>
+    <menuitem id="menu_ke_toan_danh_muc" name="Danh mục" parent="menu_ke_toan_root" sequence="90"/>
+    <menuitem id="menu_ke_toan_tai_khoan" name="Hệ thống tài khoản" parent="menu_ke_toan_danh_muc" action="action_tai_khoan" sequence="10"/>
+</odoo>
