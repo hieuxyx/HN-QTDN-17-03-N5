@@ -18,7 +18,13 @@
                             <field name="so_nguoi_bang_tuoi"/>
                             <field name="que_quan"/>
                             <field name="email"/>
+                            <field name="so_dien_thoai"/>
                             <field name="anh" widget="image"/>
+                        </group>
+                        <group string="Công tác">
+                            <field name="don_vi_id"/>
+                            <field name="chuc_vu_id"/>
+                            <field name="trang_thai"/>
                         </group>
                         <notebook>
                             <page string="Danh sách lịch sử công tác">
@@ -29,7 +35,6 @@
                             </page>
                         </notebook>
                     </sheet>
-                    
                 </form>
             </field>
         </record>
@@ -40,14 +45,12 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_dinh_danh"/>
-                    <field name="ho_ten_dem"/>
-                    <field name="ten"/>
                     <field name="ho_va_ten"/>
-                    <field name="ngay_sinh"/>
+                    <field name="don_vi_id"/>
+                    <field name="chuc_vu_id"/>
                     <field name="tuoi"/>
-                    <field name="so_nguoi_bang_tuoi"/>
-                    <field name="que_quan"/>
                     <field name="email"/>
+                    <field name="trang_thai"/>
                 </tree>
             </field>
         </record>
@@ -58,10 +61,9 @@
                 <search>
                     <field name="ma_dinh_danh"/>
                     <field name="ho_va_ten"/>
-                    <field name="ngay_sinh"/>
-                    <field name="tuoi"/>
-                    <field name="que_quan"/>
-                    <field name="email"/>
+                    <field name="don_vi_id"/>
+                    <field name="chuc_vu_id"/>
+                    <filter name="dang_lam" string="Đang làm việc" domain="[('trang_thai','=','dang_lam')]"/>
                 </search>
             </field>
         </record>
@@ -70,9 +72,7 @@
             <field name="name">Nhân viên</field>
             <field name="res_model">nhan_vien</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref = "nhan_vien_search"/>
+            <field name="search_view_id" ref="nhan_vien_search"/>
         </record>
     </data>
 </odoo>
-        
-    
