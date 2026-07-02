@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_tai_san_root" name="Quản lý tài sản" sequence="15"/>
+    <menuitem id="menu_tai_san_ts" name="Tài sản" parent="menu_tai_san_root" action="action_tai_san" sequence="10"/>
+    <menuitem id="menu_tai_san_danh_muc" name="Danh mục" parent="menu_tai_san_root" sequence="90"/>
+    <menuitem id="menu_tai_san_loai" name="Loại tài sản" parent="menu_tai_san_danh_muc" action="action_loai_tai_san" sequence="10"/>
+</odoo>

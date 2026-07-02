@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_tai_san_tree" model="ir.ui.view">
+        <field name="name">tai_san.tree</field>
+        <field name="model">tai_san</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ma_tai_san"/>
+                <field name="ten_tai_san"/>
+                <field name="loai_tai_san_id"/>
+                <field name="nguoi_quan_ly_id"/>
+                <field name="nguyen_gia"/>
+                <field name="gia_tri_con_lai"/>
+                <field name="trang_thai"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_tai_san_form" model="ir.ui.view">
+        <field name="name">tai_san.form</field>
+        <field name="model">tai_san</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_tinh_khau_hao" type="object" string="Tính bảng khấu hao"/>
+                    <button name="action_xac_nhan" type="object" string="Xác nhận" class="btn-primary"
+                            attrs="{'invisible':[('trang_thai','!=','nhap')]}"/>
+                    <button name="action_ghi_so_ky_toi" type="object" string="Ghi sổ khấu hao kỳ tới" class="btn-primary"
+                            attrs="{'invisible':[('trang_thai','!=','dang_su_dung')]}"/>
+                    <button name="action_ghi_so_toan_bo" type="object" string="Ghi sổ toàn bộ"
+                            attrs="{'invisible':[('trang_thai','!=','dang_su_dung')]}"/>
+                    <button name="action_thanh_ly" type="object" string="Thanh lý"
+                            attrs="{'invisible':[('trang_thai','in',('nhap','thanh_ly'))]}"/>
+                    <field name="trang_thai" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_tai_san"/>
+                            <field name="ten_tai_san"/>
+                            <field name="loai_tai_san_id"/>
+                            <field name="nguoi_quan_ly_id"/>
+                            <field name="don_vi_id"/>
+                        </group>
+                        <group>
+                            <field name="ngay_su_dung"/>
+                            <field name="nguyen_gia"/>
+                            <field name="gia_tri_thu_hoi"/>
+                            <field name="so_ky_khau_hao"/>
+                            <field name="phuong_phap"/>
+                            <field name="gia_tri_da_khau_hao"/>
+                            <field name="gia_tri_con_lai"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Bảng khấu hao">
+                            <field name="khau_hao_ids">
+                                <tree>
+                                    <field name="ky"/>
+                                    <field name="ngay"/>
+                                    <field name="so_tien"/>
+                                    <field name="gia_tri_con_lai"/>
+                                    <field name="but_toan_id"/>
+                                    <field name="trang_thai"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_tai_san" model="ir.actions.act_window">
+        <field name="name">Tài sản</field>
+        <field name="res_model">tai_san</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
