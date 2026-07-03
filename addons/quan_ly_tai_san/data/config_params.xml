@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="param_gemini_model" model="ir.config_parameter">
+            <field name="key">quan_ly_tai_san.gemini_model</field>
+            <field name="value">gemini-2.5-flash</field>
+        </record>
+        <record id="param_gemini_key" model="ir.config_parameter">
+            <field name="key">quan_ly_tai_san.gemini_api_key</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_tele_token" model="ir.config_parameter">
+            <field name="key">quan_ly_tai_san.telegram_bot_token</field>
+            <field name="value"></field>
+        </record>
+        <record id="param_tele_chat" model="ir.config_parameter">
+            <field name="key">quan_ly_tai_san.telegram_chat_id</field>
+            <field name="value"></field>
+        </record>
+    </data>
+</odoo>

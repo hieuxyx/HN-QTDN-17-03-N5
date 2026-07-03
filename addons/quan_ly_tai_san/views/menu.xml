@@ -2,6 +2,8 @@
 <odoo>
     <menuitem id="menu_tai_san_root" name="Quản lý tài sản" sequence="15"/>
     <menuitem id="menu_tai_san_ts" name="Tài sản" parent="menu_tai_san_root" action="action_tai_san" sequence="10"/>
+    <menuitem id="menu_tai_san_ocr" name="Nhập từ hóa đơn (AI)" parent="menu_tai_san_root" action="action_nhap_hoa_don" sequence="20"/>
+    <menuitem id="menu_tai_san_tro_ly" name="Trợ lý AI" parent="menu_tai_san_root" action="action_tro_ly" sequence="30"/>
     <menuitem id="menu_tai_san_danh_muc" name="Danh mục" parent="menu_tai_san_root" sequence="90"/>
     <menuitem id="menu_tai_san_loai" name="Loại tài sản" parent="menu_tai_san_danh_muc" action="action_loai_tai_san" sequence="10"/>
 </odoo>

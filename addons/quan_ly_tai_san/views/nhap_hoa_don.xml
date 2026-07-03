@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nhap_hoa_don_form" model="ir.ui.view">
+        <field name="name">nhap_hoa_don_ai.form</field>
+        <field name="model">nhap_hoa_don_ai</field>
+        <field name="arch" type="xml">
+            <form>
+                <p>Tải lên ảnh hóa đơn/biên nhận mua tài sản. AI sẽ đọc và tạo sẵn phiếu tài sản.</p>
+                <group>
+                    <field name="hoa_don" widget="image" filename="ten_file"/>
+                    <field name="ten_file" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="action_ocr" type="object" string="Trích xuất &amp; tạo tài sản" class="btn-primary"/>
+                    <button string="Hủy" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_nhap_hoa_don" model="ir.actions.act_window">
+        <field name="name">Nhập tài sản từ hóa đơn (AI)</field>
+        <field name="res_model">nhap_hoa_don_ai</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

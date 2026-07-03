@@ -37,6 +37,7 @@
                         <group>
                             <field name="ma_tai_san"/>
                             <field name="ten_tai_san"/>
+                            <field name="mo_ta"/>
                             <field name="loai_tai_san_id"/>
                             <field name="nguoi_quan_ly_id"/>
                             <field name="don_vi_id"/>

@@ -15,18 +15,14 @@
         <field name="name">loai_tai_san.form</field>
         <field name="model">loai_tai_san</field>
         <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group>
-                        <field name="ma"/>
-                        <field name="ten"/>
-                        <field name="so_ky_mac_dinh"/>
-                        <field name="tk_tai_san_id"/>
-                        <field name="tk_hao_mon_id"/>
-                        <field name="tk_chi_phi_id"/>
-                    </group>
-                </sheet>
-            </form>
+            <form><sheet><group>
+                <field name="ma"/>
+                <field name="ten"/>
+                <field name="so_ky_mac_dinh"/>
+                <field name="tk_tai_san_id"/>
+                <field name="tk_hao_mon_id"/>
+                <field name="tk_chi_phi_id"/>
+            </group></sheet></form>
         </field>
     </record>
     <record id="action_loai_tai_san" model="ir.actions.act_window">

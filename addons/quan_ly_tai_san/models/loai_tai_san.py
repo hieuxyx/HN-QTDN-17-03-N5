@@ -15,6 +15,4 @@ class LoaiTaiSan(models.Model):
     tk_hao_mon_id = fields.Many2one("tai_khoan_ke_toan", string="TK hao mòn (214)")
     tk_chi_phi_id = fields.Many2one("tai_khoan_ke_toan", string="TK chi phí khấu hao (642)")
 
-    _sql_constraints = [
-        ('ma_unique', 'unique(ma)', 'Mã loại tài sản phải là duy nhất'),
-    ]
+    _sql_constraints = [('ma_unique', 'unique(ma)', 'Mã loại tài sản phải là duy nhất')]
