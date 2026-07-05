@@ -15,13 +15,10 @@ Phát triển trên nền tảng **Odoo 15 (Python)**, kế thừa và mở rộ
 | STT | Họ và tên | MSSV | Phân công chính |
 |-----|-----------|------|-----------------|
 | 1 | Vi Đình Hiếu | 1771020265 |  |
-| 2 | Ngô Văn huy | 〉 |  |
+| 2 | Ngô Văn Huy |  |  |
 | 3 | Ngô Đặng Tuấn Anh |  |  |
 | 4 | Lục Đức Lương | |  |
 
-> Gợi ý phân công để thể hiện rõ đóng góp: *module HRM & tích hợp*, *module Kế toán & sổ cái*, *module Tài sản & khấu hao/tự động hóa*, *tính năng AI (OCR/Chatbot) & Telegram*, *sơ đồ nghiệp vụ & tài liệu*.
-
----
 
 ## 2. Kiến trúc hệ thống
 
