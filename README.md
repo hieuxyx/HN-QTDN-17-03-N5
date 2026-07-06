@@ -12,12 +12,12 @@ Phát triển trên nền tảng **Odoo 15 (Python)**, kế thừa và mở rộ
 - **Nhóm:** 05 — Lớp HN-QTDN-17-03
 - **Repo:** https://github.com/hieuxyx/HN-QTDN-17-03-N5
 
-| STT | Họ và tên | MSSV | Phân công chính |
-|-----|-----------|------|-----------------|
-| 1 | Vi Đình Hiếu | 1771020265 |  |
-| 2 | Ngô Văn Huy |  |  |
-| 3 | Ngô Đặng Tuấn Anh |  |  |
-| 4 | Lục Đức Lương | |  |
+| STT | Họ và tên | MSSV | 
+|-----|-----------|------|
+| 1 | Vi Đình Hiếu | 1771020265 | 
+| 2 | Ngô Văn Huy |  |  
+| 3 | Ngô Đặng Tuấn Anh |  |  
+| 4 | Lục Đức Lương | |  
 
 
 ## 2. Kiến trúc hệ thống
